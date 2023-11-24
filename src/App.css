@@ -1,5 +1,10 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .App-logo {
@@ -35,4 +40,70 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.modal-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  transform: scale(0);
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal-wrapper.active {
+  transform: scale(1);
+}
+
+.modal-window {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+}
+.modal-window svg {
+  width: 20px;
+  position: absolute;
+  right: 20px;
+}
+
+.slide-image__top img {
+  height: 420px;
+}
+
+.slide-image__nav img {
+  height: 100px;
+}
+
+.slide-image__modal img {
+  height: 300px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.slider {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.slider-main {
+  width: 560px;
+}
+
+.slide-image__modal {
+  padding: 40px 0 0 0;
+  width: 100%;
+}
+
+.slider-nav {
+  width: 100px;
+  margin: 0 50px 0 0;
 }
